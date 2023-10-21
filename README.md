@@ -19,6 +19,8 @@ WBSO is a command-line tool designed to streamline workflow management, integrat
 
 - **Alias**: Set up Git aliases for common Git commands.
 
+- **Stop**: Stop WBSO clock
+
 ## Installation
 
 1. Clone the repository:

@@ -5,7 +5,8 @@ import (
 	"os"
 
 	"github.com/spf13/cobra"
-	"wbso/cmd"
+	"github.com/gfechio/wbso/cmd"
+	"github.com/gfechio/wbso/config"
 )
 
 var rootCmd = &cobra.Command{
