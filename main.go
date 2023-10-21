@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/spf13/cobra"
 	"github.com/gfechio/wbso/cmd"
 	"github.com/gfechio/wbso/config"
+	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
