@@ -1,0 +1,10 @@
+{
+	"packages": [
+	  {
+	    "name": "github.com/yourusername/yourproject",
+	    "version": "latest"
+	  }
+	],
+	"output": "govulncheck-report.json"
+      }
+      
