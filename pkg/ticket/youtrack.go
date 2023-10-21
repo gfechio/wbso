@@ -1,11 +1,11 @@
-package youtrack
+package ticketmanagement
 
 import (
 	"encoding/json"
 	"fmt"
+	"github.com/spf13/viper"
 	"io"
 	"net/http"
-	"github.com/spf13/viper"
 )
 
 type Config struct {
