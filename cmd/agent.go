@@ -1,10 +1,10 @@
-package main
+package cmd
 
 import (
 	"fmt"
 
-	"github.com/gfechio/wbso/cmd"
 	"github.com/gfechio/wbso/config"
+	"github.com/gfechio/wbso/pkg/commands"
 	"github.com/gfechio/wbso/pkg/ticket"
 	"github.com/spf13/cobra"
 )
@@ -27,8 +27,6 @@ func init() {
 	rootCmd.AddCommand(aliasCmd)
 }
 
-
-
 func printUsage() {
 	fmt.Println("Usage: cmdline_app <subcommand>")
 	fmt.Println("Available subcommands:")
@@ -39,6 +37,7 @@ func printUsage() {
 	fmt.Println("  - push: Push changes to the remote repository.")
 	fmt.Println("  - close: Close an issue or task.")
 	fmt.Println("  - alias: Set up a Git alias.")
+	fmt.Println("  - stop: Stop the clock for a given task.")
 }
 
 var setupCmd = &cobra.Command{

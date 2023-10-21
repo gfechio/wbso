@@ -4,12 +4,11 @@ import (
 	"github.com/spf13/viper"
 )
 
-type AppConfig struct {
-	YouTrack YouTrackConfig `yaml:"youtrack"`
-	// Add other configurations as needed
+type TicketManagement struct {
+	IssueTracker `yaml:"issue_tracker"`
 }
 
-type YouTrackConfig struct {
+type IssueTrackerConfig struct {
 	BaseURL   string `yaml:"base_url"`
 	Token     string `yaml:"token"`
 	ProjectID string `yaml:"project_id"`

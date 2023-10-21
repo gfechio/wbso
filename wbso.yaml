@@ -1,0 +1,14 @@
+# Issue tracker configuration
+issue_tracker: Jira
+
+# Jira configuration
+jira:
+  base_url: https://your-jira-instance.com
+  token: your-jira-token
+  project_id: YOUR_PROJECT_ID
+
+# Youtrack configuration
+youtrack:
+  base_url: https://youtrack.com
+  token: your-youtrack-token
+  project_id: YOUR_PROJECT_ID
