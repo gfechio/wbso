@@ -3,6 +3,7 @@ package cmd
 import (
 	"fmt"
 
+	"github.com/containerd/continuity/commands"
 	"github.com/gfechio/wbso/config"
 	"github.com/gfechio/wbso/pkg/commands"
 	"github.com/gfechio/wbso/pkg/ticket"
@@ -44,7 +45,7 @@ var setupCmd = &cobra.Command{
 	Use:   "setup",
 	Short: "Initialize a new Git repository",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Setup()
+		commands.Setup(args)
 	},
 }
 
@@ -52,7 +53,7 @@ var associateCmd = &cobra.Command{
 	Use:   "associate",
 	Short: "Associate something (not implemented yet)",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Associate()
+		commands.Associate(args)
 		// Call associate function
 	},
 }
@@ -61,7 +62,7 @@ var checkoutCmd = &cobra.Command{
 	Use:   "checkout",
 	Short: "Check out a branch",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Checkout()
+		commands.Checkout(args)
 		// Call checkout function
 	},
 }
@@ -70,7 +71,7 @@ var commitCmd = &cobra.Command{
 	Use:   "commit",
 	Short: "Commit changes",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Commit()
+		commands.Commit(args)
 		// Call commit function
 	},
 }
@@ -79,7 +80,7 @@ var pushCmd = &cobra.Command{
 	Use:   "push",
 	Short: "Push changes to the remote repository",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Push()
+		commands.Push(args)
 		// Call push function
 	},
 }
@@ -88,7 +89,7 @@ var closeCmd = &cobra.Command{
 	Use:   "close",
 	Short: "Close an issue or task",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Close()
+		commands.Close(args)
 		// Call close function
 	},
 }
@@ -97,7 +98,7 @@ var stopCmd = &cobra.Command{
 	Use:   "close",
 	Short: "Stop an issue or task",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Stop()
+		commands.Stop()
 		// Call close function
 	},
 }
@@ -106,7 +107,7 @@ var aliasCmd = &cobra.Command{
 	Use:   "alias",
 	Short: "Set up a Git alias",
 	Run: func(cmd *cobra.Command, args []string) {
-		cmd.Alias()
+		commands.Alias()
 		// Call alias function
 	},
 }

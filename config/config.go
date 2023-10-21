@@ -5,7 +5,8 @@ import (
 )
 
 type TicketManagement struct {
-	IssueTracker `yaml:"issue_tracker"`
+	IssueTracker string `yaml:"issue_tracker"`
+	Config IssueTrackerConfig `yaml:"config"`
 }
 
 type IssueTrackerConfig struct {
@@ -14,8 +15,8 @@ type IssueTrackerConfig struct {
 	ProjectID string `yaml:"project_id"`
 }
 
-func ReadConfig(filename string) (AppConfig, error) {
-	var config AppConfig
+func ReadConfig(filename string) (TicketManagement, error) {
+	var config TicketManagement
 
 	viper.SetConfigFile(filename)
 	if err := viper.ReadInConfig(); err != nil {

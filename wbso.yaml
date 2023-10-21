@@ -1,14 +1,12 @@
 # Issue tracker configuration
-issue_tracker: Jira
+issue_tracker:
+  type: youtrack
+  config:
+    base_url: https://your-jira-instance.com
+    token: your-jira-token
+    project_id: YOUR_PROJECT_ID
 
-# Jira configuration
-jira:
-  base_url: https://your-jira-instance.com
-  token: your-jira-token
-  project_id: YOUR_PROJECT_ID
+time_tracker:
+  type: file
+  path: /home/.wbso/time.json
 
-# Youtrack configuration
-youtrack:
-  base_url: https://youtrack.com
-  token: your-youtrack-token
-  project_id: YOUR_PROJECT_ID
